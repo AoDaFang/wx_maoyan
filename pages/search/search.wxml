@@ -1,0 +1,114 @@
+<view class="top">
+	<view class="top_ipt_out">
+		<input placeholder="搜电影、搜影院" bindinput="dealChange" value="{{keyword}}" class="top_ipt"></input>
+		<image class="top_close" bindtap="dealClose" src="http://s0.meituan.net/bs/?f=my-canary:/deploy/images/close.png" wx:if="{{keyword.length>0}}"></image>
+	</view>
+	<navigator hover-class="none" open-type="navigateBack" class="top_cancle">取消</navigator>
+</view>
+
+<!-- 电影 -->
+<view class="movie-list" wx:if="{{movies.length>0}}">
+	<view class="movie_list_top">
+		电影
+	</view>
+	<view class="movie-item" wx:for="{{movies}}" wx:key="{{index}}">
+		<view class="moive_img">
+			<image src="{{item.img}}"></image>
+		</view>
+
+		<!-- 正在销售的电影开始 -->
+		<view class="movie_info" wx:if="{{item.showst==2}}">
+			<view class="movie_name_out">
+				<view class="movie_name">
+					{{item.nm}}
+				</view>
+				<view class="version v3d imax" wx:if='{{item.version=="v3d imax"}}'></view>
+				<view class="version v2d imax" wx:if='{{item.version=="v2d imax"}}'></view>
+				<view class="version v3d" wx:if='{{item.version=="v3d"}}'></view>
+				<view class="preShow" wx:if='{{item.preShow==true}}'></view>
+			</view>
+			<view class="movie_score_out">
+				<view class="movie_score_fix">观众评</view>
+				<view class="movie_score">
+					{{item.sc}}
+				</view>
+			</view>
+			<view class="movie_actor">
+				<view class="movie_actor_fix">主演:</view>
+				<view class="movie_actors" wx:if="{{item.star.length>0}}">
+					{{item.star}}
+				</view>
+			</view>
+			<view class="movie_show">
+				{{item.showInfo}}
+			</view>
+		</view>
+		<view class="movie_buy" wx:if="{{item.showst==2}}">
+			<button>购票</button>
+		</view>
+		<!-- 正在销售的电影结束 -->
+
+
+
+		<!-- 预售的电影开始 -->
+		<view class="movie_info" wx:if="{{item.showst==1}}">
+			<view class="movie_name">
+				{{item.nm}}
+			</view>
+			<view class="movie_score_out">
+				<view class="movie_score">
+					{{item.wish}}
+				</view>
+				<view class="movie_score_fix">想看</view>
+			</view>
+			<view class="movie_actor">
+				<view class="movie_actor_fix">主演:</view>
+				<view class="movie_actors" wx:if="{{item.star}}">
+					{{item.star}}
+				</view>
+			</view>
+			<view class="movie_show">
+				{{item.showInfo}}
+			</view>
+		</view>
+		<view class="movie_pre" wx:if="{{item.showst==1}}">
+			<button>预售</button>
+		</view>
+		<!-- 预售的电影 结束-->
+	</view>
+	
+	<view class="total">
+		查看全部{{totalMovies}}个影视剧
+	</view>
+</view>
+
+
+<!-- 影院 -->
+<view class="cinema_list" wx:if="{{cinemas.length>0}}">
+	<view class="cinema_list_top">
+		影院
+	</view>
+	<view class="cinema_item" wx:for="{{cinemas}}" wx:key="{{index}}">
+		<view class="cinema_name">
+			<view class="cinema_name_in one_line">{{item.nm}}</view>
+			<view class="sellPrice">
+				{{item.sellPrice}}
+				<text class="sellPrice_fix">元起</text>
+			</view>
+		</view>
+		<view class="cinema_address ">
+			<text class="cinema_address_in one_line">{{item.addr}}</text>
+			<text>{{item.distance}}</text>
+		</view>
+		<view class="cinema_tag">
+			<text class="blue_tag">座</text>
+			<view class="blue_tag" wx:for="{{item.hallType}}" wx:key="{{index}}" >
+				{{item}}
+			</view>
+			<view class="orange_tag" wx:if="{{item.vipDesc}}">折扣卡</view>
+		</view>
+	</view>
+	<view class="total">
+		查看全部{{totalCinemaes}}个电影院
+	</view>
+</view>

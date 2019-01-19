@@ -1,0 +1,58 @@
+page{
+	background-color: #F8F8F8;
+}
+.top{
+	display: flex;
+	justify-content: space-around;
+	height: 112rpx;
+	width: 100%;
+	background-color: white;
+	line-height: 112rpx;
+	font-size: 39rpx;
+}
+.top text{
+	font-size: 39rpx;
+}
+.top text.active{
+	color: #DF2D2D;
+}
+.reg_phone_ipt{
+	margin-top: 30rpx;
+	height: 112rpx;
+	padding-left: 40rpx;
+	background-color: white;
+	border-bottom: #DDDDDD;
+	border-top: #DDDDDD;
+}
+.check_box{
+	margin-top: 40rpx;
+	margin-left: 30rpx;
+}
+.check_box checkbox{
+	width: 60rpx;
+	height: 60rpx;
+}
+.check_box text{
+	font-size: 30rpx;
+	margin-left: 10rpx;
+}
+.msg_btn{
+	margin-top: 30rpx;
+	width: 712rpx;
+	height: 94rpx;
+	line-height: 94rpx;
+	background-color: #DCDCDC;
+	color: #9B9B9B;
+	font-size: 38rpx;
+}
+.proto{
+	color: #DF2D2D;
+}
+.copy{
+	margin-top: 30rpx;
+	font-size: 28rpx;
+	text-align: center;
+}
+.copy_phone{
+	color: #E35050;
+}

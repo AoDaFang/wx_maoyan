@@ -1,0 +1,131 @@
+page{
+	background-color: #F8F8F8;
+}
+.select_box{
+	width: 100%;
+	border-bottom: 12rpx solid #DDDDDD;
+	display: flex;
+	justify-content: space-around;
+	height: 76rpx;
+	line-height: 76rpx;
+}
+.select_item{
+	
+}
+.select_box::after{
+	content: "";
+	display: block;
+	bottom: -1px;
+	width: 254rpx;
+	height: 12rpx;
+	background-color: #ef4238;
+	-webkit-transition:left 0.2s;
+	transition: left 0.2s;
+	position: absolute;
+	top: 76rpx;
+	left: 60rpx;
+}
+.mobile_login::after{
+	left: 440rpx;
+}
+.subpage{
+	position: absolute;
+}
+.subpage_inps{
+	border-bottom: 1px solid #DDDDDD;
+}
+.subpage .subpage_inp1{
+	margin-left: 20rpx;
+	width: 750rpx;
+	height: 92rpx;
+	padding-left: 20rpx;
+	border-bottom: 1px solid #DDDDDD;
+}
+.subpage .subpage_inp2{
+	margin-left: 20rpx;
+	width: 750rpx;
+	height: 92rpx;
+	padding-left: 20rpx;
+}
+.login_btn{
+	margin-top: 30rpx;
+	height: 94rpx;
+	line-height: 94rpx;
+	background-color: #DF2D2D;
+	color: white;
+	font-size: 38rpx;
+	margin-left: 30rpx;
+	margin-right: 30rpx;
+	width: 696rpx;
+}
+.subline{
+	margin-top: 30rpx;
+	font-size: 28rpx;
+	display: flex;
+	justify-content: space-between;
+	color: #E35050;
+	margin-left: 30rpx;
+	margin-right: 60rpx;
+}
+.copy{
+	margin-top: 30rpx;
+	font-size: 28rpx;
+	text-align: center;
+}
+.copy_phone{
+	color: #E35050;
+}
+
+/* 手机号 */
+.phone_info{
+	box-sizing: border-box;
+	width: 100%;
+	height: 112rpx;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 20rpx 24rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.phone_inp{
+	width: 446rpx;
+	height: 74rpx;
+	background-color: #DCDCDC;
+	border-radius: 5px;
+	padding-left: 20rpx;
+}
+.phone_info button{
+	margin-left: 20rpx;
+	width: 246rpx;
+	height: 74rpx;
+	background-color: #DCDCDC;
+	color: #A2A2A2;
+	line-height: 74rpx;
+	font-size: 37rpx;
+}
+.msg_info{
+	box-sizing: border-box;
+	width: 100%;
+	height: 112rpx;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 20rpx 20rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.msg_inp{
+	background-color: #EBEBE4;
+	width: 710rpx;
+	height: 74rpx;
+	border-radius: 5px;
+	padding-left: 20rpx;
+}
+.msg_btn{
+	margin-top: 30rpx;
+	margin-left: 30rpx;
+	margin-right: 30rpx;
+	width: 696rpx;
+	height: 94rpx;
+	line-height: 94rpx;
+	background-color: #DCDCDC;
+	color: #9B9B9B;
+	font-size: 38rpx;
+}

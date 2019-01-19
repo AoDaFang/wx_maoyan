@@ -1,0 +1,18 @@
+<view class="top">
+	<text class="active">确认账号</text>
+	>
+	<text class="active">安全验证</text>
+	>
+	<text class="">验证</text>
+</view>
+<input class="res_phone_ipt" placeholder="手机号/邮箱/用户名"></input>
+<view class="res_code">
+	<input class="res_code_ipt" placeholder="请输入右图验证码"></input>
+	<image class="" src="https://i.meituan.com/account/appcaptcha?uuid=69266CBEF5B2B76837512BCC9FEE248687FE8FA851A805CA3E423EBD3362FD58"></image>
+	<button>换一张</button>
+</view>
+<button class="msg_btn">下一步</button>
+<view class="copy">
+	© 猫眼电影 客服电话: 
+	<text class="copy_phone">400-670-5335</text>
+</view>

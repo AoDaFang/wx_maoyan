@@ -1,0 +1,40 @@
+<view class="select_box {{showIndex == '1'?'':'mobile_login'}}" >
+	<view class="select_item" bindtap = "dealChange" data-index = "1" >美团账号登录</view>
+	<view class="select_item" bindtap = "dealChange" data-index = "2">手机验证登录</view>
+</view>
+<view class="context">
+	<view class="subpage" style="{{showIndex==1?'':'display:none'}}">
+		<view class="subpage_inps">
+			<input class="subpage_inp1" placeholder="账号名/手机号/Email"></input>
+			<input class="subpage_inp2" placeholder="请输入您的密码"></input>
+		</view>
+		<button class="login_btn">登录</button>
+		<view class="subline">
+			<navigator hover-class="none" url="/pages/reg/reg">立即注册</navigator>
+			<navigator hover-class="none" url="/pages/resetreq/resetreq">找回密码</navigator>
+		</view>
+		<view class="copy">
+			© 猫眼电影 客服电话: 
+			<text class="copy_phone">400-670-5335</text>
+		</view>
+	</view>
+	<view class="subpage" style="{{showIndex==2?'':'display:none'}}">
+		<view class="phone_info">
+			<input class="phone_inp" placeholder="请输入手机号"></input>
+			<button>获取验证码</button>
+		</view>
+		<view class="msg_info">
+			<input class="msg_inp" placeholder="请输入手机验证码"></input>
+		</view>
+		<button class="msg_btn">登录</button>
+		<view class="subline">
+			<navigator hover-class="none" url="/pages/reg/reg">立即注册</navigator>
+			<navigator hover-class="none" url="/pages/resetreq/resetreq">找回密码</navigator>
+		</view>
+		<view class="copy">
+			© 猫眼电影 客服电话: 
+			<text class="copy_phone">400-670-5335</text>
+		</view>
+	</view>
+	
+</view>

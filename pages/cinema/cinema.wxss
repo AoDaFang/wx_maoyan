@@ -1,0 +1,186 @@
+page{
+	background-color: #F8F8F8;
+}
+.top{
+	height: 88rpx;
+	width: 100%;
+	display: flex;
+}
+.region{
+	display: flex;
+	font-size: 30rpx;
+	line-height: 88rpx;
+	margin-left: 30rpx;
+}
+.region .arrow{
+	line-height: 88rpx;
+	margin-top: 38rpx;
+	margin-left: 10rpx;
+}
+.arrow{
+	width: 0;
+	height: 0;
+	border: 12rpx solid #b0b0b0;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	border-right-color: transparent;
+}
+.top_search{
+	width: 560rpx;
+	height: 56rpx;
+	background-color: white;
+	margin-top: 15rpx;
+	border: 1px solid #E6E6E6;
+	border-radius: 5px;
+	margin-left: 46rpx;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwFJREFUSA3FVs1qU0EUTibBRQiCRF3UB3BTcFHwJ0XRJ+gDhDaQ5vcJ3PgCfYL80AYSyQP4BIKQiosuhLoQXOjCbqQIJUgoyY3fdzNnmCRzk3uvBQfmzrlzzvm+OTNzz7mJxH9qyTC83W733mQyeTKbzbbQc8lk8hL9Ip1OfyqVSr/CYCzbBBKDQHU6nX2MZfQ8HNWyM949LOAU/bharb7F6DlsnFNOYhDmp9NpGx7bTi/35HkqlaphAadu9eLsCjFIS57nNRHlLct0AnmIiL5ivETPQf8Q4y56Gt1v0F8rpRog78pc0LhATFJEemIZXwHoKJvNNguFwm9r3hcHg8Gd0WjUwEJfY+K26BH54SZyQ8ztBcB7K9IzAO01Go2fAhg0NpvNB9C9Q9+hjY781bpt9y8MyBTP1CZFpC/CkJKIdrSHyMUmiKPxXBeSJvOb2mq1DiDLRbqCvFer1f7QIGzT9nuwpz/bNnZxfy6uPv0VYWvKouKZho1UfGTUkR/JOyI3uDIno2JygMEzPTHhRRJlnFH78yvglueJ78JRzEhQyFkMXbfX5Rg0p/2HWi/4K+YKq9qSWf2dymvs0cax8W1AEuesCSaHm2gGZwnfYCuszhhh1l6EMYohGJwlfANF4gt5w+qYBv+52Tg2vg2sWNowIVVll2nQNogqa3/mcDZP48/frKdiPcWqpKKkmXstfWRR+/uFg7hB9VpSpikMTPg690YmpR/834gjiI9FXh79IoEzUUibn6GUtHnG3Bslbbbb7QxIfwDjriY5r9frj0Aux7jALSnTYxGH0bXW7gDkQ9jIdaRfLFLCfEefUXA1UxapvKl6bBF1EXUZAa0sYIFYyBFt7D8QHBu/kuebyFeINXnsf65KpfIR94WXqrSO3ElMB33hDrBNh5DX/mVCf4It7ctFwntyE3kgsbXaRL/fvz8ejx8DMPR/9SbyUMT2IqLIa8mjAMWxdZB/y2QyT80/cRzQMD78lNDKOHOa84fwZbFYtCtiGJj4Noy81+uZcvkXH+aXwmK6+EsAAAAASUVORK5CYII=);
+	background-size: 27rpx 27rpx;
+	background-repeat: no-repeat;
+	background-position: 222rpx 13rpx ;
+	
+	color: #B2B2B2;
+	font-size: 26rpx;
+	line-height: 56rpx;
+	padding-left: 255rpx;
+	box-sizing: border-box;
+}
+
+.cinema_nav{
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	background-color: white;
+	align-items: center;
+}
+.nav_item{
+	display: flex;
+	width: 250rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	color: #777777;
+	font-size: 28rpx;
+	align-items: center;
+	background-color: white;
+	border-right: 1px solid #E6E6E6;
+	justify-content: center;
+}
+.nav_item .arrow{
+	margin-left: 10rpx;
+	margin-top: 10rpx;
+}
+
+/* 影院样式开始 */
+.cinema_list{
+	position: absolute;
+	top:168rpx;
+	bottom: 0;
+	width: 100%;
+	overflow: scroll;
+}
+.cinema_list::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+	color: transform;
+}
+.total{
+	margin-top: -1px;
+	width: 100%;
+	border-top: 1px solid #e6e6e6;
+	height: 92rpx;
+	color: #F1584F;
+	text-align: center;
+	line-height: 92rpx;
+	background-color: white;
+	font-size: 34rpx;
+}
+.cinema_item{
+	/* height: 292rpx; */
+	padding-bottom: 32rpx;
+	width: 100%;
+	padding-top: 36rpx;
+	padding-left: 36rpx;
+	background-color: white;
+	border-bottom: 1px solid #EBEBEB;
+	box-sizing: border-box;
+}
+.hallType{
+	display: flex;
+}
+.cinema_name{
+	display: flex;
+	font-size: 30rpx;
+}
+.cinema_name_in{
+	max-width: 460rpx;
+}
+.sellPrice{
+	color: #EF4238;
+	font-weight: bold;
+	margin-left: 34rpx;
+}
+.cinema_name .sellPrice_fix{
+	font-size: 20rpx;
+	color: #999;
+}
+.one_line{
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.cinema_address{
+	display: flex;
+	justify-content: space-between;
+	font-size: 26rpx;
+	color: #999;
+	margin-top: 26rpx;
+	padding-right: 70rpx;
+}
+.cinema_address_in{
+	max-width: 460rpx;
+}
+.cinema_tag{
+	display: flex;
+	margin-top: 12rpx;
+}
+.blue_tag{
+	margin-top: 8rpx;
+	margin-right: 8rpx;
+	height: 34rpx;
+	color: #5EA1B2;
+	border: 1px solid #5EA1B2;
+	border-radius: 2px;
+	padding: 5rpx;
+	font-size: 26rpx;
+}
+.orange_tag{
+	margin-top: 8rpx;
+	margin-right: 8rpx;
+	height: 34rpx;
+	color: #FFA114;
+	border: 1px solid #FFA114;
+	border-radius: 2px;
+	padding: 5rpx;
+	font-size: 26rpx;
+}
+.ad_info{
+	margin-top: 23rpx;
+	font-size: 24rpx;
+	color: #999;
+	display: flex;
+	margin-top: 12rpx;
+}
+.ad_info_logo{
+	display: block;
+	color: white;
+	background-color: #57C0F8;
+	width: 30rpx;
+	height: 30rpx;
+	line-height: 30rpx;
+	border-radius: 3px;
+	padding: 3rpx;
+	font-size: 20rpx;
+	text-align: center;
+	margin-right: 14rpx;
+	margin-top: -1rpx;
+}
+/* 影院样式结束 */

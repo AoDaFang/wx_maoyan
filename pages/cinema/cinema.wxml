@@ -1,0 +1,60 @@
+<view class="top">
+	<navigator hover-class="none" url="/pages/city/city">
+		<view class="region">
+			北京
+			<text class="arrow"></text>
+		</view>
+	</navigator>
+	<navigator hover-class="none" url="/pages/search/search">
+		<view class="top_search">
+			搜影院
+		</view>
+	</navigator>
+</view>
+<view class="cinema_nav">
+	<view class="nav_item">
+		<text>全城</text>
+		<text class="arrow"></text>
+	</view>
+	<view class="nav_item">
+		<text>品牌</text>
+		<text class="arrow"></text>
+	</view>
+	<view class="nav_item">
+		<text>特色</text>
+		<text class="arrow"></text>
+	</view>
+</view>
+
+
+<!-- 影院 -->
+<view class="cinema_list" wx:if="{{cinemas.length>0}}">
+	<view class="cinema_item" wx:for="{{cinemas}}" wx:key="{{index}}">
+		<view class="cinema_name">
+			<view class="cinema_name_in one_line">{{item.nm}}</view>
+			<view class="sellPrice">
+				{{item.sellPrice}}
+				<text class="sellPrice_fix">元起</text>
+			</view>
+		</view>
+		<view class="cinema_address ">
+			<text class="cinema_address_in one_line">{{item.addr}}</text>
+			<text>{{item.distance}}</text>
+		</view>
+		<view class="cinema_tag">
+			<view class="blue_tag" wx:if="{{item.tag.allowRefund==1}}">退</view>
+			<view class="blue_tag" wx:if="{{item.tag.endorse}}">改签</view>
+			<view class="orange_tag" wx:if="{{item.tag.vipTag}}">折扣卡</view>
+			<view class="orange_tag" wx:if="{{item.tag.snack}}">小吃</view>
+			
+			<!-- 放映厅类型 -->
+			<view class="hallType" wx:for="{{item}}" wx:for-item="cinema_item" wx:key="{{index}}">
+				<view class="blue_tag" wx:if="{{cinema_item.hallType}}">{{cinema_item.hallType}}</view>
+			</view>
+		</view>
+		<view class="ad_info" wx:if="{{item.promotion.cardPromotionTag}}">
+			<text class="ad_info_logo">卡</text>
+			开卡特惠，首单2张立减10元
+		</view>
+	</view>
+</view>

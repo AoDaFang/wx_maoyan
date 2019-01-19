@@ -1,0 +1,92 @@
+page{
+	background-color: #F8F8F8;
+}
+.top{
+	display: flex;
+	justify-content: space-around;
+	height: 112rpx;
+	width: 100%;
+	background-color: white;
+	line-height: 112rpx;
+	font-size: 39rpx;
+}
+.top text{
+	font-size: 39rpx;
+}
+.top text.active{
+	color: #DF2D2D;
+}
+.res_phone_ipt{
+	box-sizing: border-box;
+	margin-top: 30rpx;
+	height: 112rpx;
+	padding-left: 40rpx;
+	background-color: white;
+	border-bottom:1px solid #DDDDDD;
+	border-top:1px solid #DDDDDD;
+}
+.res_code{
+	height: 112rpx;
+	border-bottom:1px solid #DDDDDD;
+	background-color: white;
+	width: 100%;
+	line-height: 112rpx;
+}
+.res_code image{
+	width: 150rpx;
+	height: 72rpx;
+	float: left;
+	margin-top: 20rpx;
+}
+.res_code button{
+	width: 150rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	border:1rpx solid #DF2D2D;
+	background-color: white;
+	color: #DF2D2D;
+	font-size: 27rpx;
+	float: left;
+	margin-top: 30rpx;
+	margin-left: 10rpx;
+}
+.res_code_ipt{
+	padding-left: 20rpx;
+	width: 400rpx;
+	float: left;
+	height: 112rpx;
+}
+
+
+.check_box{
+	margin-top: 40rpx;
+	margin-left: 30rpx;
+}
+.check_box checkbox{
+	width: 60rpx;
+	height: 60rpx;
+}
+.check_box text{
+	font-size: 30rpx;
+	margin-left: 10rpx;
+}
+.msg_btn{
+	margin-top: 30rpx;
+	width: 712rpx;
+	height: 94rpx;
+	line-height: 94rpx;
+	background-color: #DCDCDC;
+	color: #9B9B9B;
+	font-size: 38rpx;
+}
+.proto{
+	color: #DF2D2D;
+}
+.copy{
+	margin-top: 30rpx;
+	font-size: 28rpx;
+	text-align: center;
+}
+.copy_phone{
+	color: #E35050;
+}

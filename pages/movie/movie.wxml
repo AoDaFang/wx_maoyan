@@ -1,0 +1,165 @@
+<!--pages/movie/movie.wxml-->
+
+<view>
+    <view class="top">
+        <view>
+			<navigator class="one_line top_city" hover-class="none" url="/pages/citySelect/citySelect">
+				{{selectedCity.nm}}
+				<!-- <text class="arrow"></text> -->
+			</navigator>
+		</view>
+		<view class="select-box {{showIndex==2?'coming':''}}">
+			<view class="select-box-item" bindtap ="dealChange" data-index="1">正在上映</view>
+			<view class="select-box-item" bindtap ="dealChange" data-index="2">即将上映</view>
+		</view>
+		<view class="search_img"><navigator hover-class="none" url="/pages/search/search"><image src="../../image/search.png"></image></navigator></view>
+    </view>
+	<view class="content">
+		<view class="subpage" style="{{showIndex == 1?'':'display:none'}}">
+			<view class="movie-list">
+				
+				<view class="movie-item" wx:for="{{movieOnInfoList}}" wx:key="{{index}}"  >
+					<view class="moive_img">
+						<image src="{{item.img}}"></image>
+					</view>
+					
+					<!-- 正在销售的电影开始 -->
+					<view class="movie_info" wx:if="{{item.showst==3}}">
+						<view class="movie_name_out">
+							<view class="movie_name">
+								{{item.nm}}
+							</view>
+							<view class="version v3d imax" wx:if='{{item.version=="v3d imax"}}'></view>
+							<view class="version v2d imax" wx:if='{{item.version=="v2d imax"}}'></view>
+							<view class="version v3d" wx:if='{{item.version=="v3d"}}'></view>
+							<view class="preShow" wx:if='{{item.preShow==true}}'></view>
+						</view>
+						<view class="movie_score_out">
+							<view class="movie_score_fix">观众评</view>
+							<view class="movie_score">
+								{{item.sc}}
+							</view>
+						</view>
+						<view class="movie_actor">
+							<view class="movie_actor_fix">主演:</view>
+							<view class="movie_actors">
+								{{item.star}}
+							</view>
+						</view>
+						<view class="movie_show">
+							{{item.showInfo}}
+						</view>
+					</view>
+					<view  class="movie_buy" wx:if="{{item.showst==3}}">
+						<button>购票</button>
+					</view>
+					<!-- 正在销售的电影结束 -->
+					
+					
+					
+					<!-- 预售的电影开始 -->
+					<view class="movie_info" wx:if="{{item.showst==4}}">
+						<view class="movie_name">
+							{{item.nm}}
+						</view>
+						<view class="movie_score_out">
+							<view class="movie_score">
+								{{item.wish}}
+							</view>
+							<view class="movie_score_fix">想看</view>
+						</view>
+						<view class="movie_actor">
+							<view class="movie_actor_fix">主演:</view>
+							<view class="movie_actors">
+								{{item.star}}
+							</view>
+						</view>
+						<view class="movie_show">
+							{{item.showInfo}}
+						</view>
+					</view>
+					<view  class="movie_pre" wx:if="{{item.showst==4}}">
+						<button>预售</button>
+					</view>
+					<!-- 预售的电影 结束-->
+				</view>
+				
+			</view>
+		</view>
+		
+		<!-- <view class="subpage" wx:if="{{showIndex==2}}"> -->
+		<view class="subpage" style="{{showIndex == 2?'':'display:none'}}">
+			
+			<!-- 近期最受期待 -->
+			<view class="most_list_out">
+				<view class="most-list-title">近期最受期待</view>
+				<view class="most-list">
+					<view class="mostExperted-item" wx:for="{{mostExperted}}" wx:key="{{index}}">
+						<view class="most_moive_img">
+							<image src="{{item.img}}"></image>
+							<!-- 左上心形 -->
+							<view class="like">
+								<view class="like_inner"></view>
+							</view>
+							
+							<!-- 图片下方的想看人数 -->
+							<view class="most_wish">
+								<view class="most_wish_inner">{{item.wish}}人想看</view>
+							</view>
+						</view>
+						<view class="most_moive_name">{{item.nm}}</view>
+						<view class="most_moive_date">{{item.comingTitle}}</view>
+						
+					</view>
+				</view>
+			</view>
+			
+
+			<!-- 底部的即将上映 -->
+			<view class="movie-list">
+				<view class="movie-item" wx:for="{{comingList}}" wx:key="{{index}}">
+					<view class="moive_img">
+						<image src="{{item.img}}"></image>
+					</view>
+					<view class="movie_info" >
+						<view class="movie_name_out">
+							<view class="movie_name">
+								{{item.nm}}
+							</view>
+							<view class="version v3d imax" wx:if='{{item.version=="v3d imax"}}'></view>
+							<view class="version v2d imax" wx:if='{{item.version=="v2d imax"}}'></view>
+							<view class="version v3d" wx:if='{{item.version=="v3d"}}'></view>
+							<view class="preShow" wx:if='{{item.preShow==true}}'></view>
+						</view>
+						<view class="movie_score_out">
+							<view class="movie_score">
+								{{item.wish}}
+							</view>
+							<view class="movie_score_fix">人想看</view>
+						</view>
+						<view class="movie_actor">
+							<view class="movie_actor_fix">主演:</view>
+							<view class="movie_actors">
+								{{item.star}}
+							</view>
+						</view>
+						<view class="movie_show">
+							{{item.showInfo}}
+						</view>
+					</view>
+					<view class="movie_pre" wx:if="{{item.showst==4}}">
+						<button>预售</button>
+					</view>
+					<view class="movie_like" wx:if="{{item.showst==1}}">
+						<button>想看</button>
+					</view>
+				</view>
+			</view>
+		</view>
+		
+		
+	</view>
+
+</view> 
+
+<!-- <navigator url="/pages/movieDetail/movieDetail">详情</navigator> -->

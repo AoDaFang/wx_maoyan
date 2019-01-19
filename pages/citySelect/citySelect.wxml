@@ -1,0 +1,54 @@
+<view class="all">
+	<scroll-view class="scroll-view" scroll-y="scroll-y" scroll-into-view="{{scrollId}}">
+		<view id="location" class="location">
+			<view class="items_top">定位城市</view>
+			<view class="location_main">
+				<view class="location_main_item" wx:if="{{locationState==1}}">正在定位 ...</view>
+				<view class="location_main_item"  bindtap="dealSelectCity"  wx:if="{{locationState==2}}" data-item="{{loacationCity}}">{{loacationCity.nm}}</view>
+				<view class="location_main_item" bindtap="dealFail" wx:if="{{locationState==3}}">定位失败，请点击重试</view>
+			</view>
+		</view>
+		
+		<!-- 历史城市 -->
+		<!-- wx:if="{{history.length>0}}" -->
+		<view id="history" wx:if="{{history.length>0}}">
+			<view class="items_top">最近访问城市</view>
+			<view class="history_main"  >
+				<view class="history_item one_line" bindtap="dealSelectCity" wx:for="{{history}}"  wx:key="{{index}}" data-item="{{item}}">
+					{{item.nm}}
+				</view>
+			</view>
+		</view>
+		
+		<!-- 热门城市 -->
+		<view id="hot">
+			<view class="items_top">热门城市</view>
+			<view class="history_main"  >
+				<view class="history_item one_line" bindtap="dealSelectCity" wx:for="{{hot}}" wx:key="{{index}}" data-item="{{item}}">
+					{{item.nm}}
+				</view>
+			</view>
+		</view>
+		
+		<!-- A-Z -->
+		<view class="AZ" wx:for="{{group}}" wx:key="{{index}}" id="{{item.b}}">
+			<view class="items_top">{{item.b}}</view>
+			<view class="az_item" bindtap="dealSelectCity" wx:if="{{item.list.length>0}}" wx:for="{{item.list}}" wx:key="{{index}}" wx:for-item="city_item" data-item="{{city_item}}">
+				<view class="az_item_in">
+					{{city_item.nm}}
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+	
+	<!-- 右侧导航条 -->
+	<view class="nav">
+		<view bindtap="dealNav" data-id = "location">定位</view>
+		<view bindtap="dealNav" data-id = "history">最近</view>
+		<view bindtap="dealNav" data-id = "hot">热门</view>
+		<view class="nav_az" wx:for="{{group}}" wx:key="{{index}}" wx:if="{{item.list.length>0}}" bindtap="dealNav" data-id = "{{item.b}}">
+			<view>{{item.b}}</view>
+		</view>
+	</view>
+	
+</view>
