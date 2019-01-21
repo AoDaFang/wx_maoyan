@@ -1,4 +1,4 @@
-// pages/reg/reg.js
+// pages/mine/mineDetail.js
 Page({
 
     /**
@@ -14,10 +14,6 @@ Page({
     onLoad: function (options) {
 
     },
-	
-	/**
-	 * 页面输入的时候
-	 */
 
     /**
      * 生命周期函数--监听页面初次渲染完成

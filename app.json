@@ -4,6 +4,7 @@
         "pages/citySelect/citySelect",
         "pages/cinema/cinema",
 		"pages/mine/mine",
+        "pages/mine/mineDetail",
 		"pages/index/index",
 		"pages/logs/logs",
 		"pages/movieDetail/movieDetail",

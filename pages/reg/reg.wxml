@@ -5,7 +5,7 @@
 	>
 	<text class="">设置密码</text>
 </view>
-<input class="reg_phone_ipt" placeholder="请输入您的手机号"></input>
+<input class="reg_phone_ipt" bindinput="dealInput" placeholder="请输入您的手机号"></input>
 <view class="check_box">
 	<checkbox class=""></checkbox>
 	<text>我已阅读并同意</text>

@@ -297,7 +297,6 @@ page{
 .blue_tag{
 	margin-top: 8rpx;
 	margin-right: 8rpx;
-	height: 34rpx;
 	color: #5EA1B2;
 	border: 1px solid #5EA1B2;
 	border-radius: 2px;
@@ -307,7 +306,6 @@ page{
 .orange_tag{
 	margin-top: 8rpx;
 	margin-right: 8rpx;
-	height: 34rpx;
 	color: #FFA114;
 	border: 1px solid #FFA114;
 	border-radius: 2px;

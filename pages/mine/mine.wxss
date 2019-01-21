@@ -94,13 +94,18 @@ page{
 	padding-left: 20rpx;
 }
 .phone_info button{
-	margin-left: 20rpx;
-	width: 246rpx;
+	margin-left:11rpx;
+	width:247rpx;
 	height: 74rpx;
 	background-color: #DCDCDC;
 	color: #A2A2A2;
 	line-height: 74rpx;
 	font-size: 37rpx;
+}
+.phone_info button.isPhone{
+	color: #DF2D2D;
+	border: 1px solid #DF2D2D;
+	background-color: white;
 }
 .msg_info{
 	box-sizing: border-box;
@@ -128,4 +133,9 @@ page{
 	background-color: #DCDCDC;
 	color: #9B9B9B;
 	font-size: 38rpx;
+}
+.msg_btn.isPhone{
+	background-color: #DF2D2D;
+	color: white;
+	border: none;
 }
