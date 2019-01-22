@@ -27,6 +27,8 @@ page{
 .check_box{
 	margin-top: 40rpx;
 	margin-left: 30rpx;
+	display: flex;
+	align-items: center;
 }
 .check_box checkbox{
 	width: 60rpx;
@@ -45,6 +47,11 @@ page{
 	color: #9B9B9B;
 	font-size: 38rpx;
 }
+.msg_btn.isPhone{
+	background-color: #DF2D2D;
+	color: white;
+	border: none;
+}
 .proto{
 	color: #DF2D2D;
 }
@@ -55,4 +62,13 @@ page{
 }
 .copy_phone{
 	color: #E35050;
+}
+.subline{
+	margin-top: 30rpx;
+	font-size: 28rpx;
+	display: flex;
+	justify-content: space-between;
+	color: #E35050;
+	margin-left: 30rpx;
+	margin-right: 60rpx;
 }

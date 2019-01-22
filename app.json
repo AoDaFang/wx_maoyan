@@ -1,17 +1,17 @@
-{
+    {
 	"pages": [
 		"pages/movie/movie",
-        "pages/citySelect/citySelect",
-        "pages/cinema/cinema",
+		"pages/citySelect/citySelect",
+		"pages/cinema/cinema",
 		"pages/mine/mine",
-        "pages/mine/mineDetail",
 		"pages/index/index",
 		"pages/logs/logs",
 		"pages/movieDetail/movieDetail",
 		"pages/reg/reg",
 		"pages/search/search",
-		"pages/resetreq/resetreq"
-		
+		"pages/resetreq/resetreq",
+		"pages/login/login"
+
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -19,6 +19,12 @@
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "猫眼电影"
 	},
+	"permission": {
+		"scope.userLocation": {
+			"desc": "你的位置信息将用于小程序位置接口的效果展示"
+		}
+	},
+
 	"tabBar": {
 		"color": "#000000",
 		"selectedColor": "#F03D37",

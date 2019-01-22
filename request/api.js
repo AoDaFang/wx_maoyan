@@ -1,6 +1,7 @@
 // const urlPrefix = "http://127.0.0.1/project/maoyan/index.php/";
 const urlPrefix = "http://192.168.43.254/project/maoyan/index.php/";
-
+// const urlPrefix = "http://192.168.1.107/project/maoyan/index.php/";
+// 
 //首页(电影列表-正在上映)
 
 //电影列表页 开始==================================================
